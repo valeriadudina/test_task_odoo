@@ -1,0 +1,27 @@
+<odoo>
+<record id="wizard_task_form_modal" model="ir.ui.view">
+   <field name="name" >wizard.task.wizard.form.modal</field>
+   <field name="model">wizard.task.wizard</field>
+   <field name="arch" type="xml">
+       <form string="wizard_task_wizard">
+           <sheet>
+               <group>
+                   <group>
+                       <field name="is_company"/>
+                       <field name="name" />
+                   </group>
+               </group>
+           </sheet>
+       </form>
+   </field>
+</record>
+<record id="action_wizard_task_wizard" model="ir.actions.act_window">
+    <field name="name">Wizard Task Modal</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">wizard.task.wizard</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="wizard_task_form_modal"/>
+    <field name="target">new</field>
+</record>
+
+</odoo>

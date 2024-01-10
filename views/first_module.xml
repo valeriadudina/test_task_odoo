@@ -1,0 +1,17 @@
+
+<odoo>
+<record id="first_model_action" model="ir.actions.act_window">
+  <field name="name">First Module Form</field>
+  <field name = "type">ir.actions.act_window</field>
+  <field name = "res_model">firstmodule.first</field>
+   <field name = "view_mode">tree,kanban,form,pivot,graph,activity</field>
+
+  <field name = "help" type="html">
+<p class = "o_view_nocontent_smiling_face">No Content</p>
+  </field>
+</record>
+<menuitem id ="first_module_menu_root" name = "First Module" sequence = "10"/>
+<menuitem id ="first_module_submenu" name = "First Module SubMenu" parent = "first_module_menu_root" sequence = "10"/>
+ <menuitem id ="first_module_submenu_two" name = "First Module SubMenu Two" parent = "first_module_submenu" sequence = "10" action="first_model_action"/>
+
+  </odoo>
